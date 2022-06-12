@@ -5,6 +5,8 @@
     display: flex;
     justify-content: space-between;
     padding: 2% 5%;
+    flex-flow: row wrap;
+    align-items: center;
 }
 .atm{
     width: 45%;
@@ -13,11 +15,8 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    float: right;
-    clear: left;
     text-align: left;
     align-content: flex-start;
-    align-self: flex-end;
     background-color: #fff;
     border-radius: 5px;
     padding: 10px;
@@ -44,3 +43,12 @@
     background-color: #e6e3e3 !important;
     width: 80% !important;
 }
+@media screen and (max-width: 600px) {
+    .paymentForm {
+      flex-direction: column-reverse;
+    }
+    .paymentForm__header,
+    .atm{
+        width: 100%;
+    }
+  }

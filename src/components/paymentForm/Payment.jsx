@@ -1,9 +1,9 @@
 import React from "react";
-import './paymentForm.css'
+import "./paymentForm.css";
 import { prefixes } from "../prefixes.js";
 import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
-import Button from "../Button"
+import Button from "../Button";
 import AtmCard from "../ATM/AtmCard";
 
 export default class Payment extends React.Component {
@@ -19,10 +19,10 @@ export default class Payment extends React.Component {
       activeAmex: false,
       type: "",
       valid: "",
-      expirationDate:'03/24',
+      expirationDate: "03/24",
       checked: false,
-      postalCode:'10119',
-      secCode:'420',
+      postalCode: "10119",
+      secCode: "420",
       error: {},
     };
   }
@@ -165,92 +165,95 @@ export default class Payment extends React.Component {
     return (
       <>
         <div className="paymentForm">
-        <div className="atm">
-          <AtmCard
-            cardNumber={cardNumber}
-            expirationDate={expirationDate}
-            activeVisa={activeVisa}
-            activeMastercard={activeMastercard}
-            activeDiscover={activeDiscover}
-            activeAmex={activeAmex}
-            type={type}
-            valid={valid}
-          />
-        </div>
-              <div className="paymentForm__header">
-        <form action="">
-          <div>
-            <label htmlFor="cardNumber">Credit card number</label>
-            <TextField
-              id="outlined-basic cardNumber"
-              type="text"
-              value={cardNumber}
-              placeholder={placeholder}
-              maxLength={maxLength}
-              onChange={this.handleChange}
-              variant="outlined"
-              required
-              className="outlined"
-              
+          <div className="atm">
+            <AtmCard
+              cardNumber={cardNumber}
+              expirationDate={expirationDate}
+              activeVisa={activeVisa}
+              activeMastercard={activeMastercard}
+              activeDiscover={activeDiscover}
+              activeAmex={activeAmex}
+              type={type}
+              valid={valid}
             />
           </div>
-          <div>
-            <label htmlFor="date">Expiration date</label>
-            <TextField
-              id="outlined-basic date"
-              required
-              variant="outlined"
-              className="outlined"
-              type="text"
-              value={expirationDate}
-              placeholder={placeholder}
-              maxLength={5}
-              onChange={(e)=> this.setState({expirationDate:e.target.value})}
-            />
-          </div>
-          <div>
-            <label htmlFor="secCode">Security code</label>
-            <TextField
-              id="outlined-basic secCode"
-              className="outlined"
-            
-            type="text"
-            value={secCode}
-            placeholder={placeholder}
-            maxLength={maxLength}
-            onChange={(e)=> this.setState({secCode:e.target.value})}
-              required
-              variant="outlined"
-              
-            />
-          </div>
-          <div>
-            <label htmlFor="postalCode">Postal code</label>
-            <TextField
-              id="outlined-basic postalCode"
-              type="text"
-              value={postalCode}
-              placeholder={placeholder}
-              maxLength={maxLength}
-              onChange={(e)=> this.setState({postalCode:e.target.value})}
-              className="outlined"
-              required
-              variant="outlined"
-           
-            />
-          </div>
-          <div>
-            <label htmlFor="saveDefault">
-              <Checkbox id="saveDefault" onChange={
-                (e) => this.setState({ checked: !checked })
-              }/>
-              Use this card for next purchase
-            </label>
-          </div>
-        </form>
+          <div className="paymentForm__header">
+            <form action="">
+              <div>
+                <label htmlFor="cardNumber">Credit card number</label>
+                <TextField
+                  id="outlined-basic cardNumber"
+                  type="text"
+                  value={cardNumber}
+                  placeholder={placeholder}
+                  maxLength={maxLength}
+                  onChange={this.handleChange}
+                  variant="outlined"
+                  required
+                  className="outlined"
+                />
+              </div>
+              <div>
+                <label htmlFor="date">Expiration date</label>
+                <TextField
+                  id="outlined-basic date"
+                  required
+                  variant="outlined"
+                  className="outlined"
+                  type="text"
+                  value={expirationDate}
+                  placeholder={placeholder}
+                  maxLength={5}
+                  onChange={(e) =>
+                    this.setState({ expirationDate: e.target.value })
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="secCode">Security code</label>
+                <TextField
+                  id="outlined-basic secCode"
+                  className="outlined"
+                  type="text"
+                  value={secCode}
+                  placeholder={placeholder}
+                  maxLength={maxLength}
+                  onChange={(e) => this.setState({ secCode: e.target.value })}
+                  required
+                  variant="outlined"
+                />
+              </div>
+              <div>
+                <label htmlFor="postalCode">Postal code</label>
+                <TextField
+                  id="outlined-basic postalCode"
+                  type="text"
+                  value={postalCode}
+                  placeholder={placeholder}
+                  maxLength={maxLength}
+                  onChange={(e) =>
+                    this.setState({ postalCode: e.target.value })
+                  }
+                  className="outlined"
+                  required
+                  variant="outlined"
+                />
+              </div>
+              <div>
+                <label htmlFor="saveDefault">
+                  <Checkbox
+                    id="saveDefault"
+                    onChange={(e) => this.setState({ checked: !checked })}
+                  />
+                  Use this card for next purchase
+                </label>
+              </div>
+            </form>
 
-        <Button className="addCard" padding="20px">Add Card</Button>
-      </div>
+            <Button className="addCard" padding="20px">
+              Add Card
+            </Button>
+          </div>
         </div>
         <div className="error">
           <span className={this.state.valid ? "error valid" : "error invalid"}>
