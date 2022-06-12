@@ -1,0 +1,28 @@
+.paymentTotal{
+    width: 100%;
+    padding: 2% 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+.sub{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    border: none;
+    border-top: 2px solid rgba(110, 110, 110,.2);
+    border-bottom: 2px solid rgba(110, 110, 110,.2);
+
+}
+.paymentTotal .sub> div{
+    display: flex;
+    padding-top: 2%;
+    width: 100%;
+    justify-content: space-between;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
