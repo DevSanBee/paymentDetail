@@ -1,0 +1,46 @@
+.paymentForm *{
+    margin: 0%;
+}
+.paymentForm {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 5%;
+}
+.atm{
+    width: 45%;
+}
+.paymentForm__header{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    clear: left;
+    text-align: left;
+    align-content: flex-start;
+    align-self: flex-end;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.paymentForm__header > form > div{
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 5%;
+}
+.paymentForm__header > form > div >label{
+    display: block;
+    margin-bottom: 5%;
+}.paymentForm__header > form :last-child{
+    margin-bottom: 1%;
+}
+.addCard{
+    width: 94%;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 4% 5% !important;
+}
+.outlined{
+    background-color: #e6e3e3 !important;
+    width: 80% !important;
+}
