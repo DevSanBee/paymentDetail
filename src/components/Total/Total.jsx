@@ -23,7 +23,7 @@ const Total = () => {
             </div>
         </div>
         <div className="total">
-            <Button padding="10px 40px">Complete Payment</Button>
+            <Button padding="10px 1%">Complete Payment</Button>
             <b>
                 <h3>TOTAL:₦2556.64</h3>
             </b>
