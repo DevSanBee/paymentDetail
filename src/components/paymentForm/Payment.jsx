@@ -5,6 +5,7 @@ import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "../Button";
 import AtmCard from "../ATM/AtmCard";
+import PaymentInfo from "../paymentInfo/PaymentInfo";
 
 export default class Payment extends React.Component {
   constructor(props) {
@@ -168,6 +169,7 @@ export default class Payment extends React.Component {
     return (
       <>
         <div className="paymentForm">
+          <PaymentInfo/>
           <div className="atm">
             <AtmCard
               cardNumber={cardNumber}
