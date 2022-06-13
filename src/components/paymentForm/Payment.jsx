@@ -134,9 +134,12 @@ export default class Payment extends React.Component {
   }
 
   handleChange = (e) => {
-    this.setState({
-      cardNumber: e.target.value,
-    });
+    const re = /^[0-9\b]+$/;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      this.setState({
+        cardNumber: e.target.value,
+      });
+    }
   };
 
   handleClick = (e) => {
@@ -204,9 +207,12 @@ export default class Payment extends React.Component {
                   value={expirationDate}
                   placeholder={placeholder}
                   maxLength={5}
-                  onChange={(e) =>
-                    this.setState({ expirationDate: e.target.value })
-                  }
+                  onChange={(e) => {
+                    const re = /^[0-9\b]+$/;
+                    if (e.target.value === "" || re.test(e.target.value)) {
+                      this.setState({ expirationDate: e.target.value });
+                    }
+                  }}
                 />
               </div>
               <div>
@@ -217,8 +223,13 @@ export default class Payment extends React.Component {
                   type="text"
                   value={secCode}
                   placeholder={placeholder}
-                  maxLength={maxLength}
-                  onChange={(e) => this.setState({ secCode: e.target.value })}
+                  maxLength={3}
+                  onChange={(e) => {
+                    const re = /^[0-9\b]+$/;
+                    if (e.target.value === "" || re.test(e.target.value)) {
+                      this.setState({ secCode: e.target.value });
+                    }
+                  }}
                   required
                   variant="outlined"
                 />
@@ -230,10 +241,13 @@ export default class Payment extends React.Component {
                   type="text"
                   value={postalCode}
                   placeholder={placeholder}
-                  maxLength={maxLength}
-                  onChange={(e) =>
-                    this.setState({ postalCode: e.target.value })
-                  }
+                  maxLength={5}
+                  onChange={(e) => {
+                    const re = /^[0-9\b]+$/;
+                    if (e.target.value === "" || re.test(e.target.value)) {
+                      this.setState({ postalCode: e.target.value });
+                    }
+                  }}
                   className="outlined"
                   required
                   variant="outlined"
