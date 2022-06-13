@@ -168,8 +168,8 @@ export default class Payment extends React.Component {
     } = this.state;
     return (
       <>
-        <div className="paymentForm">
           <PaymentInfo/>
+        <div className="paymentForm">
           <div className="atm">
             <AtmCard
               cardNumber={cardNumber}

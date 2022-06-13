@@ -1,6 +1,6 @@
 import React from "react";
 import "./paymentInfo.css";
-import BasicTextFields from "../paymentForm/PaymentForm";
+// import BasicTextFields from "../paymentForm/PaymentForm";
 
 const PaymentInfo = () => {
   return (
@@ -39,12 +39,6 @@ const PaymentInfo = () => {
               </label>
             </b>
           </span>
-        </section>
-        <section className="section2">
-          <div>
-            <BasicTextFields />
-          </div>
-          <div></div>
         </section>
       </div>
     </>
