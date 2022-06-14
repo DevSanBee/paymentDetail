@@ -1,6 +1,5 @@
 import React from "react";
 import "./paymentInfo.css";
-// import BasicTextFields from "../paymentForm/PaymentForm";
 
 const PaymentInfo = () => {
   return (
